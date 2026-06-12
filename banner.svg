@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1441 302"
+     width="1441"
+     height="302"
+     style="background:#262c36">
+
+    <defs>
+        <!-- Glow -->
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="4" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+
+        <!-- Stronger glow for meteors -->
+        <filter id="meteorGlow">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+
+        <!-- Gradient for waves -->
+        <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#605239"/>
+            <stop offset="50%" stop-color="#49ca7b"/>
+            <stop offset="100%" stop-color="#796749"/>
+        </linearGradient>
+
+        <!-- Gradient for glowing circle -->
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="50%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#ffffff"/>
+        </linearGradient>
+
+        <!-- Meteor trail gradients -->
+        
+        <linearGradient id="trail-1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#888888" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#888888" stop-opacity="1"/>
+        </linearGradient>
+        <filter id="iconColor-1" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values="0 0 0 0 0.329 0 0 0 0 0.753 0 0 0 0 0.490 0 0 0 1 0"/>
+        </filter>
+
+        <linearGradient id="trail-2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#4FC08D" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#4FC08D" stop-opacity="1"/>
+        </linearGradient>
+
+        <linearGradient id="trail-3" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+        </linearGradient>
+
+        <linearGradient id="trail-1781287210622" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#3776AB" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#3776AB" stop-opacity="1"/>
+        </linearGradient>
+
+        <linearGradient id="trail-1781287269313" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#61DAFB" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#61DAFB" stop-opacity="1"/>
+        </linearGradient>
+
+        <!-- Circle clip for avatar -->
+        <clipPath id="avatarClip">
+            <circle cx="720.5" cy="151" r="55"/>
+        </clipPath>
+    </defs>
+
+    <!-- Background waves -->
+    <path d="M0 151 Q180 121 360 151 T721 151 T1081 151 T1441 151"
+          fill="none"
+          stroke="url(#waveGrad)"
+          stroke-width="2"
+          opacity="0.5">
+        <animate attributeName="d"
+                 dur="6s"
+                 repeatCount="indefinite"
+                 values="
+             M0 151 Q180 121 360 151 T721 151 T1081 151 T1441 151;
+             M0 151 Q180 181 360 151 T721 151 T1081 151 T1441 151;
+             M0 151 Q180 121 360 151 T721 151 T1081 151 T1441 151"/>
+    </path>
+
+    <!-- ========== METEOR LOGOS ========== -->
+    
+            <!-- tabler:alien Meteor -->
+            <g filter="url(#meteorGlow)" visibility="hidden">
+                <line x1="100" y1="-50" x2="112.94095225512604" y2="-1.7037086855465873" stroke="url(#trail-1)" stroke-width="2" stroke-linecap="round">
+                    <animate attributeName="x1" values="100;216.98620838633937" dur="3.6s" repeatCount="indefinite" begin="0s"/>
+                    <animate attributeName="y1" values="-50;386.5984734826589" dur="3.6s" repeatCount="indefinite" begin="0s"/>
+                    <animate attributeName="x2" values="112.94095225512604;229.9271606414654" dur="3.6s" repeatCount="indefinite" begin="0s"/>
+                    <animate attributeName="y2" values="-1.7037086855465873;434.8947647971123" dur="3.6s" repeatCount="indefinite" begin="0s"/>
+                </line>
+                <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiI+PHBhdGggZD0iTTExIDE3YTIuNSAyLjUgMCAwIDAgMiAwIi8+PHBhdGggZD0iTTEyIDNDNy4zMzYgMyA0LjYwNCA1LjMzMSA0LjEzOCA4LjU5NWExMS44MiAxMS44MiAwIDAgMCAyIDguNTkyYTEwLjggMTAuOCAwIDAgMCAzLjE5OSAzLjA2NGMxLjY2NiAxIDMuNjY0IDEgNS4zMyAwYTEwLjggMTAuOCAwIDAgMCAzLjE5OS0zLjA2NGExMS45IDExLjkgMCAwIDAgMi04LjU5MkMxOS40IDUuMzMgMTYuNjY4IDMgMTIuMDA0IDN6bS00IDhsMiAybTYtMmwtMiAyIi8+PC9nPjwvc3ZnPg==" width="32" height="32" x="96.94095225512604" y="-17.703708685546587" filter="url(#iconColor-1)">
+                    <animate attributeName="x" values="96.94095225512604;213.9271606414654" dur="3.6s" repeatCount="indefinite" begin="0s"/>
+                    <animate attributeName="y" values="-17.703708685546587;418.8947647971123" dur="3.6s" repeatCount="indefinite" begin="0s"/>
+                </image>
+                <set attributeName="visibility" to="visible" begin="0s"/>
+            </g>
+
+            <!-- logos:vue Meteor -->
+            <g filter="url(#meteorGlow)" visibility="hidden">
+                <line x1="300" y1="-50" x2="312.94095225512604" y2="-1.7037086855465873" stroke="url(#trail-2)" stroke-width="2" stroke-linecap="round">
+                    <animate attributeName="x1" values="300;416.9862083863394" dur="10s" repeatCount="indefinite" begin="3s"/>
+                    <animate attributeName="y1" values="-50;386.5984734826589" dur="10s" repeatCount="indefinite" begin="3s"/>
+                    <animate attributeName="x2" values="312.94095225512604;429.92716064146543" dur="10s" repeatCount="indefinite" begin="3s"/>
+                    <animate attributeName="y2" values="-1.7037086855465873;434.8947647971123" dur="10s" repeatCount="indefinite" begin="3s"/>
+                </line>
+                <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjE2ZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjU2IDIyMSI+PHBhdGggZmlsbD0iIzQxYjg4MyIgZD0iTTIwNC44IDBIMjU2TDEyOCAyMjAuOEwwIDBoOTcuOTJMMTI4IDUxLjJMMTU3LjQ0IDB6Ii8+PHBhdGggZmlsbD0iIzQxYjg4MyIgZD0ibTAgMGwxMjggMjIwLjhMMjU2IDBoLTUxLjJMMTI4IDEzMi40OEw1MC41NiAweiIvPjxwYXRoIGZpbGw9IiMzNTQ5NWUiIGQ9Ik01MC41NiAwTDEyOCAxMzMuMTJMMjA0LjggMGgtNDcuMzZMMTI4IDUxLjJMOTcuOTIgMHoiLz48L3N2Zz4=" width="32" height="32" x="296.94095225512604" y="-17.703708685546587" >
+                    <animate attributeName="x" values="296.94095225512604;413.92716064146543" dur="10s" repeatCount="indefinite" begin="3s"/>
+                    <animate attributeName="y" values="-17.703708685546587;418.8947647971123" dur="10s" repeatCount="indefinite" begin="3s"/>
+                </image>
+                <set attributeName="visibility" to="visible" begin="3s"/>
+            </g>
+
+            <!-- mdi:github Meteor -->
+            <g filter="url(#meteorGlow)" visibility="hidden">
+                <line x1="500" y1="-50" x2="512.940952255126" y2="-1.7037086855465873" stroke="url(#trail-3)" stroke-width="2" stroke-linecap="round">
+                    <animate attributeName="x1" values="500;616.9862083863394" dur="10s" repeatCount="indefinite" begin="6s"/>
+                    <animate attributeName="y1" values="-50;386.5984734826589" dur="10s" repeatCount="indefinite" begin="6s"/>
+                    <animate attributeName="x2" values="512.940952255126;629.9271606414654" dur="10s" repeatCount="indefinite" begin="6s"/>
+                    <animate attributeName="y2" values="-1.7037086855465873;434.8947647971123" dur="10s" repeatCount="indefinite" begin="6s"/>
+                </line>
+                <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTEyIDJBMTAgMTAgMCAwIDAgMiAxMmMwIDQuNDIgMi44NyA4LjE3IDYuODQgOS41Yy41LjA4LjY2LS4yMy42Ni0uNXYtMS42OWMtMi43Ny42LTMuMzYtMS4zNC0zLjM2LTEuMzRjLS40Ni0xLjE2LTEuMTEtMS40Ny0xLjExLTEuNDdjLS45MS0uNjIuMDctLjYuMDctLjZjMSAuMDcgMS41MyAxLjAzIDEuNTMgMS4wM2MuODcgMS41MiAyLjM0IDEuMDcgMi45MS44M2MuMDktLjY1LjM1LTEuMDkuNjMtMS4zNGMtMi4yMi0uMjUtNC41NS0xLjExLTQuNTUtNC45MmMwLTEuMTEuMzgtMiAxLjAzLTIuNzFjLS4xLS4yNS0uNDUtMS4yOS4xLTIuNjRjMCAwIC44NC0uMjcgMi43NSAxLjAyYy43OS0uMjIgMS42NS0uMzMgMi41LS4zM3MxLjcxLjExIDIuNS4zM2MxLjkxLTEuMjkgMi43NS0xLjAyIDIuNzUtMS4wMmMuNTUgMS4zNS4yIDIuMzkuMSAyLjY0Yy42NS43MSAxLjAzIDEuNiAxLjAzIDIuNzFjMCAzLjgyLTIuMzQgNC42Ni00LjU3IDQuOTFjLjM2LjMxLjY5LjkyLjY5IDEuODVWMjFjMCAuMjcuMTYuNTkuNjcuNUMxOS4xNCAyMC4xNiAyMiAxNi40MiAyMiAxMkExMCAxMCAwIDAgMCAxMiAyIi8+PC9zdmc+" width="32" height="32" x="496.94095225512604" y="-17.703708685546587" >
+                    <animate attributeName="x" values="496.94095225512604;613.9271606414654" dur="10s" repeatCount="indefinite" begin="6s"/>
+                    <animate attributeName="y" values="-17.703708685546587;418.8947647971123" dur="10s" repeatCount="indefinite" begin="6s"/>
+                </image>
+                <set attributeName="visibility" to="visible" begin="6s"/>
+            </g>
+
+            <!-- logos:python Meteor -->
+            <g filter="url(#meteorGlow)" visibility="hidden">
+                <line x1="964.7756943641124" y1="-50" x2="977.7166466192384" y2="-1.7037086855465873" stroke="url(#trail-1781287210622)" stroke-width="2" stroke-linecap="round">
+                    <animate attributeName="x1" values="964.7756943641124;1081.7619027504518" dur="3.5s" repeatCount="indefinite" begin="2.2s"/>
+                    <animate attributeName="y1" values="-50;386.5984734826589" dur="3.5s" repeatCount="indefinite" begin="2.2s"/>
+                    <animate attributeName="x2" values="977.7166466192384;1094.7028550055777" dur="3.5s" repeatCount="indefinite" begin="2.2s"/>
+                    <animate attributeName="y2" values="-1.7037086855465873;434.8947647971123" dur="3.5s" repeatCount="indefinite" begin="2.2s"/>
+                </line>
+                <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjAxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjU2IDI1NSI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJTVkdnMzlXbGVlUCIgeDE9IjEyLjk1OSUiIHgyPSI3OS42MzklIiB5MT0iMTIuMDM5JSIgeTI9Ijc4LjIwMSUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzODdlYjgiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzNjY5OTQiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHbFhvUmtjNFQiIHgxPSIxOS4xMjglIiB4Mj0iOTAuNzQyJSIgeTE9IjIwLjU3OSUiIHkyPSI4OC40MjklIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZlMDUyIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZjMzMxIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBhdGggZmlsbD0idXJsKCNTVkdnMzlXbGVlUCkiIGQ9Ik0xMjYuOTE2LjA3MmMtNjQuODMyIDAtNjAuNzg0IDI4LjExNS02MC43ODQgMjguMTE1bC4wNzIgMjkuMTI4aDYxLjg2OHY4Ljc0NUg0MS42MzFTLjE0NSA2MS4zNTUuMTQ1IDEyNi43N2MwIDY1LjQxNyAzNi4yMSA2My4wOTcgMzYuMjEgNjMuMDk3aDIxLjYxdi0zMC4zNTZzLTEuMTY1LTM2LjIxIDM1LjYzMi0zNi4yMWg2MS4zNjJzMzQuNDc1LjU1NyAzNC40NzUtMzMuMzE5VjMzLjk3UzE5NC42Ny4wNzIgMTI2LjkxNi4wNzJNOTIuODAyIDE5LjY2YTExLjEyIDExLjEyIDAgMCAxIDExLjEzIDExLjEzYTExLjEyIDExLjEyIDAgMCAxLTExLjEzIDExLjEzYTExLjEyIDExLjEyIDAgMCAxLTExLjEzLTExLjEzYTExLjEyIDExLjEyIDAgMCAxIDExLjEzLTExLjEzIi8+PHBhdGggZmlsbD0idXJsKCNTVkdsWG9Sa2M0VCkiIGQ9Ik0xMjguNzU3IDI1NC4xMjZjNjQuODMyIDAgNjAuNzg0LTI4LjExNSA2MC43ODQtMjguMTE1bC0uMDcyLTI5LjEyN0gxMjcuNnYtOC43NDVoODYuNDQxczQxLjQ4NiA0LjcwNSA0MS40ODYtNjAuNzEyYzAtNjUuNDE2LTM2LjIxLTYzLjA5Ni0zNi4yMS02My4wOTZoLTIxLjYxdjMwLjM1NXMxLjE2NSAzNi4yMS0zNS42MzIgMzYuMjFoLTYxLjM2MnMtMzQuNDc1LS41NTctMzQuNDc1IDMzLjMydjU2LjAxM3MtNS4yMzUgMzMuODk3IDYyLjUxOCAzMy44OTdtMzQuMTE0LTE5LjU4NmExMS4xMiAxMS4xMiAwIDAgMS0xMS4xMy0xMS4xM2ExMS4xMiAxMS4xMiAwIDAgMSAxMS4xMy0xMS4xMzFhMTEuMTIgMTEuMTIgMCAwIDEgMTEuMTMgMTEuMTNhMTEuMTIgMTEuMTIgMCAwIDEtMTEuMTMgMTEuMTMiLz48L3N2Zz4=" width="32" height="32" x="961.7166466192384" y="-17.703708685546587" >
+                    <animate attributeName="x" values="961.7166466192384;1078.7028550055777" dur="3.5s" repeatCount="indefinite" begin="2.2s"/>
+                    <animate attributeName="y" values="-17.703708685546587;418.8947647971123" dur="3.5s" repeatCount="indefinite" begin="2.2s"/>
+                </image>
+                <set attributeName="visibility" to="visible" begin="2.2s"/>
+            </g>
+
+            <!-- logos:react Meteor -->
+            <g filter="url(#meteorGlow)" visibility="hidden">
+                <line x1="1200" y1="-50" x2="1212.9409522551261" y2="-1.7037086855465873" stroke="url(#trail-1781287269313)" stroke-width="2" stroke-linecap="round">
+                    <animate attributeName="x1" values="1200;1316.9862083863393" dur="10s" repeatCount="indefinite" begin="2.8s"/>
+                    <animate attributeName="y1" values="-50;386.5984734826589" dur="10s" repeatCount="indefinite" begin="2.8s"/>
+                    <animate attributeName="x2" values="1212.9409522551261;1329.9271606414654" dur="10s" repeatCount="indefinite" begin="2.8s"/>
+                    <animate attributeName="y2" values="-1.7037086855465873;434.8947647971123" dur="10s" repeatCount="indefinite" begin="2.8s"/>
+                </line>
+                <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjEzZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjU2IDIyOCI+PHBhdGggZmlsbD0iIzAwZDhmZiIgZD0iTTIxMC40ODMgNzMuODI0YTE3MiAxNzIgMCAwIDAtOC4yNC0yLjU5N2MuNDY1LTEuOS44OTMtMy43NzcgMS4yNzMtNS42MjFjNi4yMzgtMzAuMjgxIDIuMTYtNTQuNjc2LTExLjc2OS02Mi43MDhjLTEzLjM1NS03LjctMzUuMTk2LjMyOS01Ny4yNTQgMTkuNTI2YTE3MSAxNzEgMCAwIDAtNi4zNzUgNS44NDhhMTU2IDE1NiAwIDAgMC00LjI0MS0zLjkxN0MxMDAuNzU5IDMuODI5IDc3LjU4Ny00LjgyMiA2My42NzMgMy4yMzNDNTAuMzMgMTAuOTU3IDQ2LjM3OSAzMy44OSA1MS45OTUgNjIuNTg4YTE3MSAxNzEgMCAwIDAgMS44OTIgOC40OGMtMy4yOC45MzItNi40NDUgMS45MjQtOS40NzQgMi45OEMxNy4zMDkgODMuNDk4IDAgOTguMzA3IDAgMTEzLjY2OGMwIDE1Ljg2NSAxOC41ODIgMzEuNzc4IDQ2LjgxMiA0MS40MjdhMTQ2IDE0NiAwIDAgMCA2LjkyMSAyLjE2NWExNjggMTY4IDAgMCAwLTIuMDEgOS4xMzhjLTUuMzU0IDI4LjItMS4xNzMgNTAuNTkxIDEyLjEzNCA1OC4yNjZjMTMuNzQ0IDcuOTI2IDM2LjgxMi0uMjIgNTkuMjczLTE5Ljg1NWExNDYgMTQ2IDAgMCAwIDUuMzQyLTQuOTIzYTE2OCAxNjggMCAwIDAgNi45MiA2LjMxNGMyMS43NTggMTguNzIyIDQzLjI0NiAyNi4yODIgNTYuNTQgMTguNTg2YzEzLjczMS03Ljk0OSAxOC4xOTQtMzIuMDAzIDEyLjQtNjEuMjY4YTE0NSAxNDUgMCAwIDAtMS41MzUtNi44NDJjMS42Mi0uNDggMy4yMS0uOTc0IDQuNzYtMS40ODhjMjkuMzQ4LTkuNzIzIDQ4LjQ0My0yNS40NDMgNDguNDQzLTQxLjUyYzAtMTUuNDE3LTE3Ljg2OC0zMC4zMjYtNDUuNTE3LTM5Ljg0NG0tNi4zNjUgNzAuOTg0cS0yLjEwMi42OTQtNC4zIDEuMzQ1Yy0zLjI0LTEwLjI1Ny03LjYxMi0yMS4xNjMtMTIuOTYzLTMyLjQzMmM1LjEwNi0xMSA5LjMxLTIxLjc2NyAxMi40NTktMzEuOTU3YzIuNjE5Ljc1OCA1LjE2IDEuNTU3IDcuNjEgMi40YzIzLjY5IDguMTU2IDM4LjE0IDIwLjIxMyAzOC4xNCAyOS41MDRjMCA5Ljg5Ni0xNS42MDYgMjIuNzQzLTQwLjk0NiAzMS4xNG0tMTAuNTE0IDIwLjgzNGMyLjU2MiAxMi45NCAyLjkyNyAyNC42NCAxLjIzIDMzLjc4N2MtMS41MjQgOC4yMTktNC41OSAxMy42OTgtOC4zODIgMTUuODkzYy04LjA2NyA0LjY3LTI1LjMyLTEuNC00My45MjctMTcuNDEyYTE1NyAxNTcgMCAwIDEtNi40MzctNS44N2M3LjIxNC03Ljg4OSAxNC40MjMtMTcuMDYgMjEuNDU5LTI3LjI0NmMxMi4zNzYtMS4wOTggMjQuMDY4LTIuODk0IDM0LjY3MS01LjM0NXEuNzg1IDMuMTYyIDEuMzg2IDYuMTkzTTg3LjI3NiAyMTQuNTE1Yy03Ljg4MiAyLjc4My0xNC4xNiAyLjg2My0xNy45NTUuNjc1Yy04LjA3NS00LjY1Ny0xMS40MzItMjIuNjM2LTYuODUzLTQ2Ljc1MmExNTcgMTU3IDAgMCAxIDEuODY5LTguNDk5YzEwLjQ4NiAyLjMyIDIyLjA5MyAzLjk4OCAzNC40OTggNC45OTRjNy4wODQgOS45NjcgMTQuNTAxIDE5LjEyOCAyMS45NzYgMjcuMTVhMTM1IDEzNSAwIDAgMS00Ljg3NyA0LjQ5MmMtOS45MzMgOC42ODItMTkuODg2IDE0Ljg0Mi0yOC42NTggMTcuOTRNNTAuMzUgMTQ0Ljc0N2MtMTIuNDgzLTQuMjY3LTIyLjc5Mi05LjgxMi0yOS44NTgtMTUuODYzYy02LjM1LTUuNDM3LTkuNTU1LTEwLjgzNi05LjU1NS0xNS4yMTZjMC05LjMyMiAxMy44OTctMjEuMjEyIDM3LjA3Ni0yOS4yOTNjMi44MTMtLjk4IDUuNzU3LTEuOTA1IDguODEyLTIuNzczYzMuMjA0IDEwLjQyIDcuNDA2IDIxLjMxNSAxMi40NzcgMzIuMzMyYy01LjEzNyAxMS4xOC05LjM5OSAyMi4yNDktMTIuNjM0IDMyLjc5MmExMzUgMTM1IDAgMCAxLTYuMzE4LTEuOTc5bTEyLjM3OC04NC4yNmMtNC44MTEtMjQuNTg3LTEuNjE2LTQzLjEzNCA2LjQyNS00Ny43ODljOC41NjQtNC45NTggMjcuNTAyIDIuMTExIDQ3LjQ2MyAxOS44MzVhMTQ0IDE0NCAwIDAgMSAzLjg0MSAzLjU0NWMtNy40MzggNy45ODctMTQuNzg3IDE3LjA4LTIxLjgwOCAyNi45ODhjLTEyLjA0IDEuMTE2LTIzLjU2NSAyLjkwOC0zNC4xNjEgNS4zMDlhMTYwIDE2MCAwIDAgMS0xLjc2LTcuODg3bTExMC40MjcgMjcuMjY4YTM0OCAzNDggMCAwIDAtNy43ODUtMTIuODAzYzguMTY4IDEuMDMzIDE1Ljk5NCAyLjQwNCAyMy4zNDMgNC4wOGMtMi4yMDYgNy4wNzItNC45NTYgMTQuNDY1LTguMTkzIDIyLjA0NWEzODEgMzgxIDAgMCAwLTcuMzY1LTEzLjMyMm0tNDUuMDMyLTQzLjg2MWM1LjA0NCA1LjQ2NSAxMC4wOTYgMTEuNTY2IDE1LjA2NSAxOC4xODZhMzIyIDMyMiAwIDAgMC0zMC4yNTctLjAwNmM0Ljk3NC02LjU1OSAxMC4wNjktMTIuNjUyIDE1LjE5Mi0xOC4xOE04Mi44MDIgODcuODNhMzIzIDMyMyAwIDAgMC03LjIyNyAxMy4yMzhjLTMuMTg0LTcuNTUzLTUuOTA5LTE0Ljk4LTguMTM0LTIyLjE1MmM3LjMwNC0xLjYzNCAxNS4wOTMtMi45NyAyMy4yMDktMy45ODRhMzIyIDMyMiAwIDAgMC03Ljg0OCAxMi44OTdtOC4wODEgNjUuMzUyYy04LjM4NS0uOTM2LTE2LjI5MS0yLjIwMy0yMy41OTMtMy43OTNjMi4yNi03LjMgNS4wNDUtMTQuODg1IDguMjk4LTIyLjZhMzIxIDMyMSAwIDAgMCA3LjI1NyAxMy4yNDZjMi41OTQgNC40OCA1LjI4IDguODY4IDguMDM4IDEzLjE0N20zNy41NDIgMzEuMDNjLTUuMTg0LTUuNTkyLTEwLjM1NC0xMS43NzktMTUuNDAzLTE4LjQzM2M0LjkwMi4xOTIgOS44OTkuMjkgMTQuOTc4LjI5YzUuMjE4IDAgMTAuMzc2LS4xMTcgMTUuNDUzLS4zNDNjLTQuOTg1IDYuNzc0LTEwLjAxOCAxMi45Ny0xNS4wMjggMTguNDg2bTUyLjE5OC01Ny44MTdjMy40MjIgNy44IDYuMzA2IDE1LjM0NSA4LjU5NiAyMi41MmMtNy40MjIgMS42OTQtMTUuNDM2IDMuMDU4LTIzLjg4IDQuMDcxYTM4MiAzODIgMCAwIDAgNy44NTktMTMuMDI2YTM0NyAzNDcgMCAwIDAgNy40MjUtMTMuNTY1bS0xNi44OTggOC4xMDFhMzU5IDM1OSAwIDAgMS0xMi4yODEgMTkuODE1YTMyOSAzMjkgMCAwIDEtMjMuNDQ0LjgyM2MtNy45NjcgMC0xNS43MTYtLjI0OC0yMy4xNzgtLjczMmEzMTAgMzEwIDAgMCAxLTEyLjUxMy0xOS44NDZoLjAwMWEzMDcgMzA3IDAgMCAxLTEwLjkyMy0yMC42MjdhMzEwIDMxMCAwIDAgMSAxMC44OS0yMC42MzdsLS4wMDEuMDAxYTMwNyAzMDcgMCAwIDEgMTIuNDEzLTE5Ljc2MWM3LjYxMy0uNTc2IDE1LjQyLS44NzYgMjMuMzEtLjg3NkgxMjhjNy45MjYgMCAxNS43NDMuMzAzIDIzLjM1NC44ODNhMzI5IDMyOSAwIDAgMSAxMi4zMzUgMTkuNjk1YTM1OSAzNTkgMCAwIDEgMTEuMDM2IDIwLjU0YTMzMCAzMzAgMCAwIDEtMTEgMjAuNzIybTIyLjU2LTEyMi4xMjRjOC41NzIgNC45NDQgMTEuOTA2IDI0Ljg4MSA2LjUyIDUxLjAyNnEtLjUxOCAyLjUwNC0xLjE1IDUuMDljLTEwLjYyMi0yLjQ1Mi0yMi4xNTUtNC4yNzUtMzQuMjMtNS40MDhjLTcuMDM0LTEwLjAxNy0xNC4zMjMtMTkuMTI0LTIxLjY0LTI3LjAwOGExNjEgMTYxIDAgMCAxIDUuODg4LTUuNGMxOC45LTE2LjQ0NyAzNi41NjQtMjIuOTQxIDQ0LjYxMi0xOC4zTTEyOCA5MC44MDhjMTIuNjI1IDAgMjIuODYgMTAuMjM1IDIyLjg2IDIyLjg2cy0xMC4yMzUgMjIuODYtMjIuODYgMjIuODZzLTIyLjg2LTEwLjIzNS0yMi44Ni0yMi44NnMxMC4yMzUtMjIuODYgMjIuODYtMjIuODYiLz48L3N2Zz4=" width="32" height="32" x="1196.9409522551261" y="-17.703708685546587" >
+                    <animate attributeName="x" values="1196.9409522551261;1313.9271606414654" dur="10s" repeatCount="indefinite" begin="2.8s"/>
+                    <animate attributeName="y" values="-17.703708685546587;418.8947647971123" dur="10s" repeatCount="indefinite" begin="2.8s"/>
+                </image>
+                <set attributeName="visibility" to="visible" begin="2.8s"/>
+            </g>
+
+    <image
+            href="data:image/png;base64,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"
+            x="665.5" y="96"
+            width="110" height="110"
+            clip-path="url(#avatarClip)"
+            preserveAspectRatio="xMidYMid slice" />
+
+    <circle cx="720.5" cy="151" r="55"
+            fill="none"
+            stroke="url(#glowGrad)"
+            stroke-width="3"
+            filter="url(#glow)">
+        <animate attributeName="r"
+                 values="50;60;50"
+                 dur="2.5s"
+                 repeatCount="indefinite"/>
+        <animate attributeName="opacity"
+                 values="0.6;1;0.6"
+                 dur="2.5s"
+                 repeatCount="indefinite"/>
+    </circle>
+
+    <g transform="translate(720.5 151)">
+        <circle cx="0" cy="0" r="70"
+                fill="none"
+                stroke="url(#glowGrad)"
+                stroke-width="2"
+                stroke-dasharray="6 4"
+                filter="url(#glow)">
+            <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    from="0"
+                    to="360"
+                    dur="10s"
+                    repeatCount="indefinite"/>
+        </circle>
+    </g>
+
+    <!-- Floating particles -->
+    <g fill="#f59e0b" opacity="0.8">
+        
+        <circle cx="144" cy="242" r="2">
+            <animate attributeName="cy" values="242;60" dur="5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;1;0" dur="5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="533" cy="76" r="2">
+            <animate attributeName="cy" values="76;272" dur="6s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;1;0" dur="6s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="324" cy="242" r="2">
+            <animate attributeName="cy" values="242;60" dur="7s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;1;0" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1111" cy="76" r="2">
+            <animate attributeName="cy" values="76;272" dur="5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;1;0" dur="5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="924" cy="242" r="2">
+            <animate attributeName="cy" values="242;60" dur="6s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;1;0" dur="6s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1297" cy="76" r="2">
+            <animate attributeName="cy" values="76;272" dur="7s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;1;0" dur="7s" repeatCount="indefinite"/>
+        </circle>
+    </g>
+
+    <!-- Border -->
+    <rect x="2" y="2" 
+          width="1437" height="298" 
+          rx="8" ry="8"
+          fill="none" 
+          stroke="#60d2a1" 
+          stroke-width="4"/>
+</svg>
