@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/School-Otto_Krause-00b4d8?style=flat-square&logo=gitpod&logoColor=white" alt="Krause">
+  <img src="https://img.shields.io/badge/School-ET_35-00b4d8?style=flat-square&logo=gitpod&logoColor=white" alt="ET35">
   <img src="https://img.shields.io/badge/Paradigm-Object_Oriented-39ff14?style=flat-square" alt="POO">
   <img src="https://img.shields.io/badge/Profile-Full_Stack-vividgrey?style=flat-square" alt="Fullstack">
 </p>
@@ -18,7 +18,7 @@
 
 ### 📡 Inicializando Perfil...
 
-- 🎓 **Status Actual:** Cursando el último año de secundaria técnica en computación en el **ET1 Otto Krause**.
+- 🎓 **Status Actual:** Cursando el último año de secundaria técnica en computación en el **ET35 Ing. Eduardo Latzina**.
 - 🛠️ **Filosofía de Desarrollo:** No me ato a un solo lado de la cancha; me muevo cómodo en el ecosistema **Full-Stack**, estructurando lógica sólida mediante la **Programación Orientada a Objetos** y diseñando bases de datos eficientes.
 - ⚡ **Core Focus:** Modelado de arquitecturas limpias, consumo y creación de APIs robustas, y resolución de problemas complejos mediante código escalable.
 
@@ -58,8 +58,8 @@
 ### 📊 Registros de Actividad (System Metrics)
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=feghi0&show_icons=true&theme=matrix&count_private=true&hide_border=true" alt="GitHub Stats" height="180" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=feghi0&layout=compact&theme=matrix&hide_border=true" alt="Top Languages" height="180" />
+  <img src="https://github-readme-stats-git-master-anuraghazra.vercel.app/api?username=feghi0&show_icons=true&theme=matrix&count_private=true&hide_border=true&v=1" alt="GitHub Stats" height="180" />
+  <img src="https://github-readme-stats-git-master-anuraghazra.vercel.app/api/top-langs/ username=feghi0&layout=compact&theme=matrix&hide_border=true&v=1" alt="Top Languages" height="180" />
 </p>
 
 ---
@@ -67,7 +67,7 @@
 ### 🕹️ Terminal Log
 
 ```bash
-$ Krause-OS --status
-> Division: Computer Science Senior
+$ Latzina-OS --status
+> Division: Computer Science Junior
 > Current objective: Building high-performance software.
 > "Object-oriented software design is the art of planning for change."
