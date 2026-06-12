@@ -58,7 +58,7 @@
 ### 📊 Registros de Actividad (System Metrics)
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=feghi0B&show_icons=true&theme=matrix&count_private=true&hide_border=true" alt="GitHub Stats" height="180" />
+  <img src="https://github-readme-stats.vercel.app/api?username=feghi0&show_icons=true&theme=matrix&count_private=true&hide_border=true" alt="GitHub Stats" height="180" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=feghi0&layout=compact&theme=matrix&hide_border=true" alt="Top Languages" height="180" />
 </p>
 
