@@ -58,8 +58,8 @@
 ### 📊 Registros de Actividad (System Metrics)
 
 <p align="center">
-  <img src="https://github-readme-stats-git-master-anuraghazra.vercel.app/api?username=feghi0&show_icons=true&theme=matrix&count_private=true&hide_border=true&v=1" alt="GitHub Stats" height="180" />
-  <img src="https://github-readme-stats-git-master-anuraghazra.vercel.app/api/top-langs/ username=feghi0&layout=compact&theme=matrix&hide_border=true&v=1" alt="Top Languages" height="180" />
+  <img src="https://github-readme-stats.vercel.app/api?username=feghi0&show_icons=true&theme=tokyonight&count_private=true&hide_border=true" alt="Estadísticas de GitHub" height="180" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=feghi0&layout=compact&theme=tokyonight&hide_border=true" alt="Lenguajes más usados" height="180" />
 </p>
 
 ---
